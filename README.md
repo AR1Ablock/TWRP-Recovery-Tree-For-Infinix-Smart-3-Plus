@@ -20,9 +20,9 @@ Whats Working:-
 
 *abd root & Sideload.
 
-* File Manager.
+*File Manager.
 
-* Most Stable & Perfect.
+*Most Stable & Perfect.
 --------------------------------
 Whats Not Working:-
 --------------------------------
