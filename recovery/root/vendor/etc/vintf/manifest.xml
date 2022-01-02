@@ -203,7 +203,7 @@
         </interface>
         <fqname>@1.2::IPower/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -229,6 +229,16 @@
         <fqname>@1.2::IRadio/slot2</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IRadioConfig</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
@@ -430,11 +440,13 @@
         <version>1.0</version>
         <interface>
             <name>ILog</name>
+            <instance>ATMWiFiHidlServer</instance>
             <instance>MobileLogHidlServer</instance>
             <instance>ModemLogHidlServer</instance>
             <instance>aee</instance>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
         <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
         <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
         <fqname>@1.0::ILog/aee</fqname>
@@ -443,12 +455,12 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mms</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.5</version>
         <interface>
             <name>IMms</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IMms/default</fqname>
+        <fqname>@1.5::IMms/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mtkcodecservice</name>
@@ -510,10 +522,10 @@
         </interface>
         <fqname>@2.2::IPictureQuality/default</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" override="true">
         <name>vendor.mediatek.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>3.11</version>
+        <version>3.20</version>
         <interface>
             <name>IRadio</name>
             <instance>imsrild1</instance>
@@ -528,14 +540,14 @@
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@3.11::IRadio/imsrild1</fqname>
-        <fqname>@3.11::IRadio/imsrild2</fqname>
-        <fqname>@3.11::IRadio/se1</fqname>
-        <fqname>@3.11::IRadio/se2</fqname>
-        <fqname>@3.11::IRadio/slot1</fqname>
-        <fqname>@3.11::IRadio/slot2</fqname>
-        <fqname>@3.11::ISap/slot1</fqname>
-        <fqname>@3.11::ISap/slot2</fqname>
+        <fqname>@3.20::IRadio/imsrild1</fqname>
+        <fqname>@3.20::IRadio/imsrild2</fqname>
+        <fqname>@3.20::IRadio/se1</fqname>
+        <fqname>@3.20::IRadio/se2</fqname>
+        <fqname>@3.20::IRadio/slot1</fqname>
+        <fqname>@3.20::IRadio/slot2</fqname>
+        <fqname>@3.20::ISap/slot1</fqname>
+        <fqname>@3.20::ISap/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
@@ -586,6 +598,26 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISwfingerprint/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.transsion.hardware.rm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IResMonitor</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IResMonitor/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.transsion.hardware.tranlog</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITranLog</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ITranLog/default</fqname>
     </hal>
     <sepolicy>
         <version>28.0</version>

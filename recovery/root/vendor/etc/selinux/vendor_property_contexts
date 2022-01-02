@@ -310,10 +310,6 @@ ro.vendor.fullscreen_switch u:object_r:mtk_fullscreenswitch_prop:s0
 #============= allow em set ims xcap property ===============
 persist.vendor.ss. u:object_r:mtk_ss_vendor_prop:s0
 
-# OS: add XWWYWPO-87 by zhaoyang.shi 20180801 start
-#=============mtk sd default path property=============
-persist.vendor.sys.sd.defaultpath u:object_r:mtk_sd_defaultpath_prop:s0
-# OS: add XWWYWPO-87 by zhaoyang.shi 20180801 end
 # MTK Antutu feature
 ro.vendor.net.upload.benchmark.default u:object_r:mtk_antutu_prop:s0
 
@@ -336,6 +332,8 @@ persist.vendor.mtk.xcap.rawurl  u:object_r:persist_xcap_rawurl_prop:s0
 # TSD: add XLELHLES-2172 by zhiqing.deng 20190123 start
 ro.vendor.mtk_flight_mode_power_off_md u:object_r:custom_mtk_flight_mode_power_off_md_prop:s0
 # TSD: add XLELHLES-2172 by zhiqing.deng 20190123 end
+#============= meta set atci property ==============
+persist.vendor.service.atci.atm_mode u:object_r:atci_sys_prop:s0
 #line 1 "device/mediatek/sepolicy/bsp/non_plat/property_contexts"
 # ==============================================
 # MTK Policy Rule
@@ -402,6 +400,8 @@ persist.vendor.net.wo.epdg_fqdn u:object_r:mtk_wfc_entitlement_prop:s0
 
 #=============allow system_app to get opt-in property  ==============
 persist.vendor.mtk_wfc_opt_in u:object_r:mtk_wfc_opt_in_prop:s0
+persist.vendor.opt-in.url u:object_r:mtk_opt_in_url_prop:s0
+persist.vendor.apptoken.required u:object_r:mtk_apptoken_required_prop:s0
 
 #=============allow radio to set common data releated property  ==============
 vendor.ril.md_changed_apn_class u:object_r:mtk_common_data_prop:s0
@@ -757,6 +757,9 @@ ro.vendor.sim_me_lock_mode u:object_r:mtk_default_prop:s0
 #=============MTK CAM Security property=============
 ro.vendor.mtk_cam_security u:object_r:mtk_cam_security_prop:s0
 
+#=============TSD: add for RABHLYSP-1947 by lishelu 20190418 allow system apps read ro.opr.orange.common.support property============
+ro.opr.orange.common.support u:object_r:mtk_default_prop:s0
+
 #=============TSD: add for RABHLYSP-1602 by lishelu 20190305 allow system apps read ro.transsion.simlocked property============
 ro.transsion.simlocked u:object_r:mtk_default_prop:s0
 #line 1 "vendor/mediatek/proprietary/modem/x627_h624_a1/sepolicy/p0/property_contexts"
@@ -780,16 +783,25 @@ debug.turning.mask u:object_r:debug_tmask_prop:s0
 debug.camera.ischg u:object_r:debug_ischg_prop:s0
 debug.camera.cf u:object_r:debug_cf_prop:s0
 debug.camera.precf u:object_r:debug_precf_prop:s0
+#ITD:modify for watermarkfile by lei.ni 190114 start
+ro.transsion.camera_watermark u:object_r:ro_transsion_camera_watermark_support_prop:s0
+##ITD:modify for watermarkfile by lei.ni 190114 end
 #line 1 "device/mediatek/sepolicy/custom/module/pnpmgr/property_contexts"
 #[PPD] add pnpmgr by chaoquan.li 20171127 start
 sys.pnpmgr.state u:object_r:pnpmgr_state_prop:s0
 #[PPD] add pnpmgr by chaoquan.li 20171127 end
+
+# PPD for pnp check point by zhi.cheng 20190520 start
+prop.pnp. u:object_r:pnpmgr_state_prop:s0
+# PPD for pnp check point by zhi.cheng 20190520 end
+
 #=============allow vendor_init to set ro.vendor.pnpmgr_support===========
 ro.vendor.pnpmgr.support u:object_r:ro_vendor_pnpmgr_support_prop:s0
 #line 1 "device/mediatek/sepolicy/custom/module/ft_module/property_contexts"
-#BSP:add XWWYLHLYS-761 by wang.qin 20181017 start
+#BSP:add XWWYLHLYS-761 by wang.qin 20181017
 ro.apdb.release.version u:object_r:mtk_default_prop:s0
-#BSP:add XWWYLHLYS-760 by wang.qin 20181017 end
+#BSP: add read fstab failed XLWSHBLEB-561 by wang.qin 20191231
+ro.vendor.tran.fstab.init u:object_r:service_nvram_init_prop:s0
 
 #line 1 "device/mediatek/sepolicy/custom/common/os/property_contexts"
 # Transsion Top Secret
