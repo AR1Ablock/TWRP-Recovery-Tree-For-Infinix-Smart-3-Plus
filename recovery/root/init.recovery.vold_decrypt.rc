@@ -11,7 +11,7 @@ on fs
     setprop crypto.ready 1
 
 on init
-    export LD_LIBRARY_PATH /vendor/lib/hw:system_root/system/lib/vndk/vndk-28:system_root/system/lib/vndk/vndk-sp-28:/system_root/system/lib/vndk-sp-28
+    export LD_LIBRARY_PATH /vendor/lib/hw:/system_root/system/lib/vndk/vndk-28:/system_root/system/lib/vndk/vndk-sp-28:/system_root/system/lib/vndk-sp-28
     mkdir /mnt/vendor/persist 0700 root root
     mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist
     
