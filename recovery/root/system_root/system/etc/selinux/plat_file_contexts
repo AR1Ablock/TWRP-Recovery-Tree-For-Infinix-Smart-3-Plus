@@ -380,6 +380,7 @@
 /vendor_seapp_contexts		u:object_r:seapp_contexts_file:s0
 /plat_service_contexts		u:object_r:service_contexts_file:s0
 /nonplat_file_contexts		u:object_r:file_contexts_file:s0
+/system/bin/terservice		u:object_r:terservice_exec:s0
 /system/bin/md_monitor		u:object_r:md_monitor_exec:s0
 /system/bin/fsck_msdos		--	u:object_r:fsck_exec:s0
 /system/bin/sload_f2fs		--	u:object_r:e2fs_exec:s0
@@ -421,6 +422,7 @@
 /nonplat_property_contexts		u:object_r:property_contexts_file:s0
 /vendor_hwservice_contexts		u:object_r:hwservice_contexts_file:s0
 /system/bin/capturepackets		u:object_r:capturepackets_exec:s0
+/system/bin/mdi_redirector		u:object_r:mdi_redirector_exec:s0
 /system/bin/batterywarning		u:object_r:batterywarning_exec:s0
 /system/bin/incident_helper		u:object_r:incident_helper_exec:s0
 /system/bin/update_verifier		u:object_r:update_verifier_exec:s0

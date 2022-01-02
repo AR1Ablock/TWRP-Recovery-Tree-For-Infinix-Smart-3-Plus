@@ -198,6 +198,7 @@ permrecords         u:object_r:mtk_permrecords_service:s0
 media.mmsdk                             u:object_r:mtk_advcamserver_service:s0
 media.advcam                            u:object_r:mtk_advcamserver_service:s0
 AAL                                     u:object_r:aal_service:s0
+terservice                              u:object_r:terservice_service:s0
 mobile                                  u:object_r:mtk_mobile_service:s0
 msgmonitorservice                       u:object_r:mtk_msg_monitor_service:s0
 mtk-perfservice                         u:object_r:mtk_perf_service:s0
@@ -212,6 +213,7 @@ mtksimphonebook                         u:object_r:mtk_simphonebook_service:s0
 data_shaping                            u:object_r:mtk_data_shaping_service:s0
 mtkconnmetrics                          u:object_r:mtk_connmetrics_service:s0
 search_engine_service                   u:object_r:mtk_search_engine_service:s0
+omadm_service                           u:object_r:mtk_omadm_service:s0
 duraspeed                               u:object_r:mtk_duraspeed_service:s0
 FullscreenSwitchService                 u:object_r:mtk_fullscreen_switch_service:s0
 fm_radio_service                        u:object_r:mtk_fm_radio_service:s0
@@ -234,3 +236,4 @@ nfc_settings                            u:object_r:nfc_service:s0
 vendor.trustonic.teeservice.ITeeService    					u:object_r:tee_service:s0
 vendor.trustonic.teeregistryservice.ITeeRegistryService    	u:object_r:teeregistry_service:s0
 com.goodix.FingerprintService    u:object_r:goodix_fingerprint_service:s0
+tran_tranlog    u:object_r:tranlog_service:s0
