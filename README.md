@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/78879680/147422555-c100b20c-a484-43ce-aca4-37d32ce4a4f4.png)
 
 
-# Custom_Recovery_Tree_For_X627
+# Custom_Recovery_Tree_For_Infinix_Smart_3_Plus (All Varients).
 
 This is Final Version OF TWRP Recovery After Alot Of Tests.
 
